@@ -6,6 +6,7 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 #  CocoaPods使用指南：https://guides.cocoapods.org/making/making-a-cocoapod.html
+#  发布：https://blog.csdn.net/sinat_31807529/article/details/80486589
 #
 
 Pod::Spec.new do |spec|
