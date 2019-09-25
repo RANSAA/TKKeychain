@@ -42,6 +42,16 @@ NS_ASSUME_NONNULL_BEGIN
  ps:kSecClassGenericPassword: 一般密码会使用
  */
 @property (nonatomic, copy, nonnull) NSString *service;
+
+/**
+ groupID:用于用于同账号下不同APP之间共享钥匙串数据,需要共享的APP,它们要有共同的Keychain Groups
+ 格式：teamID + Keychain Groups
+ 例：  3955LG3NH3.com.public.groups.udid
+ 注意：要使用groupID时，要把项目配置中的Keychain Shaing打开，并且需要添加相同的groups ID(注：可以添加多个groups ID)
+ **/
+@property (nonatomic, copy, nullable) NSString *groupID;
+
+
 /** kSecAttrLabel
  :描述(可选)给用户看的
  **/

@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04BE649E233A105C004E0899 /* TKKeyChainDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TKKeyChainDemo.entitlements; sourceTree = "<group>"; };
 		04C5540E233895FA003421C5 /* TKKeyChainDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKKeyChainDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C55411233895FA003421C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C55412233895FA003421C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,11 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04BE649F233A1A4F004E0899 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		04C55405233895FA003421C5 = {
 			isa = PBXGroup;
 			children = (
 				04C55410233895FA003421C5 /* TKKeyChainDemo */,
 				04C5540F233895FA003421C5 /* Products */,
+				04BE649F233A1A4F004E0899 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +74,7 @@
 		04C55410233895FA003421C5 /* TKKeyChainDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04BE649E233A105C004E0899 /* TKKeyChainDemo.entitlements */,
 				04C5544A2338969D003421C5 /* TKKeychain */,
 				04C55411233895FA003421C5 /* AppDelegate.h */,
 				04C55412233895FA003421C5 /* AppDelegate.m */,
@@ -122,6 +132,14 @@
 				TargetAttributes = {
 					04C5540D233895FA003421C5 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -307,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TKKeyChainDemo/TKKeyChainDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				INFOPLIST_FILE = TKKeyChainDemo/Info.plist;
@@ -325,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TKKeyChainDemo/TKKeyChainDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				INFOPLIST_FILE = TKKeyChainDemo/Info.plist;

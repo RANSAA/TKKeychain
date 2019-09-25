@@ -83,11 +83,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 附加
 /**
- 获取设备UDID,APP卸载之后也不会变
- 注意：不同的APP获取到的UDID不同，目前相同的TeamID,的UDID也不相同，没共享！
+ 获取设备UDID,APP卸载之后也不会变，但是不同的APP获取到的UDID不同
  **/
 + (NSString *)getUDIDString;
-
+/**
+ 不同APP(同帐号下)之间共享UDID，获取的UDID都是相同的
+ teamID:开发者账号的TeamID(如：39E8LG3NH3)
+ 打开Capabilities->Keychan sharing并且添加：com.device.udid.groups
+ **/
++ (NSString *)getUDIDStringWithTeam:(nullable NSString *)teamID;
 
 @end
 

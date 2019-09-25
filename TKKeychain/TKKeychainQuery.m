@@ -25,15 +25,10 @@
         [dictionary setObject:self.account forKey:(__bridge id)kSecAttrAccount];
     }
 
-//Team Group 钥匙串共享操作
-//#if __IPHONE_3_0 || __MAC_10_9
-//#if !TARGET_IPHONE_SIMULATOR
-//    if (self.accessGroup) {
-//        [dictionary setObject:self.accessGroup forKey:(__bridge id)kSecAttrAccessGroup];
-//    }
-//#endif
-//#endif
-
+    if (self.groupID) {
+        [dictionary setObject:self.groupID forKey:(__bridge id)kSecAttrAccessGroup];
+    }
+    
     return dictionary;
 }
 
@@ -269,7 +264,7 @@
 
     CFTypeRef result = NULL;
     NSMutableDictionary *query = [self query];
-    [query setObject:@YES forKey:(__bridge id)kSecReturnData];
+    [query setObject:(id)kCFBooleanTrue forKey:(__bridge id)kSecReturnData];
     [query setObject:(__bridge id)kSecMatchLimitOne forKey:(__bridge id)kSecMatchLimit];
     status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &result);
 
