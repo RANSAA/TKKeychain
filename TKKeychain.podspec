@@ -7,6 +7,12 @@
 #
 #  CocoaPods使用指南：https://guides.cocoapods.org/making/making-a-cocoapod.html
 #  发布：https://blog.csdn.net/sinat_31807529/article/details/80486589
+
+#  注册账号令牌：pod trunk register 1352892108@qq.com [sayaDev]
+#  推送到cocospods上：pod trunk push 
+#  从cocospods中删除已经提交过的框架：pod trunk delete TKKeychain 1.0.0
+#
+#
 #
 
 Pod::Spec.new do |spec|
